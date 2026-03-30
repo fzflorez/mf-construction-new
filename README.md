@@ -1,6 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MF Construction
 
-## Getting Started
+Portafolio web de MF Construction - Empresa especializada en construcción, remodelación y acabados de alta calidad.
+
+## 🏗️ Sobre el Proyecto
+
+MF Construction es un sitio web moderno desarrollado con Next.js que muestra nuestros proyectos de construcción, remodelación y acabados. Los clientes pueden explorar nuestro trabajo a través de videos e imágenes, y contactarnos directamente vía WhatsApp.
+
+## ✨ Características
+
+- **Galería de Proyectos**: Visualización de trabajos con videos e imágenes
+- **Filtrado por Categorías**:
+  - Enchapes
+  - Estuco y Pintura
+  - Repello / Pañete
+  - Obra Civil
+- **Videos e Imágenes**: Galería multimedia con modales
+- **Contacto Directo**: Integración con WhatsApp
+- **Diseño Responsive**: Optimizado para todos los dispositivos
+- **Animaciones**: Efectos AOS para mejor experiencia
+
+## 🛠️ Tecnologías
+
+- **Frontend**: Next.js 14 (App Router)
+- **Estilos**: Tailwind CSS
+- **Fuentes**: Inter y Poppins (Google Fonts)
+- **Animaciones**: AOS (Animate On Scroll)
+- **Iconos**: Lucide React
+- **Optimización**: Next.js Image optimization
+
+## 🚀 Getting Started
 
 First, run the development server:
 
@@ -16,21 +44,100 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estructura del Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── globals.css          # Estilos globales
+│   ├── layout.tsx           # Layout principal
+│   └── page.tsx             # Página de inicio
+├── components/
+│   ├── Header.tsx           # Navegación y header
+│   ├── Footer.tsx           # Pie de página
+│   ├── ProjectCard.tsx      # Cards de proyectos
+│   ├── FilterButtons.tsx    # Botones de filtrado
+│   ├── VideoModal.tsx       # Modal para videos
+│   └── ImageGallery.tsx     # Galería de imágenes
+└── data/
+    └── projects.ts          # Datos de proyectos
+```
 
-## Learn More
+## 🎨 Diseño y UX
 
-To learn more about Next.js, take a look at the following resources:
+- **Paleta de Colores**: Tema oscuro con acentos verdes (lima y verde oscuro)
+- **Tipografía**: Inter para texto, Poppins para encabezados
+- **Interacciones**: Hover effects, transiciones suaves, animaciones scroll
+- **Accesibilidad**: Optimizado para WCAG, navegación por teclado
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Contacto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **WhatsApp**: +57 316 704 3836
+- **Email**: [Tu email aquí]
+- **Ubicación**: [Tu ubicación aquí]
 
-## Deploy on Vercel
+## 🔧 Personalización
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Modificar Colores
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edita las clases de color en los componentes:
+
+- Verde lima: `bg-lime-600`, `text-lime-600`
+- Verde oscuro: `#65a30d`
+- Tema oscuro: `bg-gray-900`, `bg-gray-800`
+
+## 🚀 Deploy
+
+El sitio está optimizado para deploy en Netlify:
+
+### Opción 1: Netlify CLI (Recomendado)
+
+```bash
+# Instalar Netlify CLI
+npm install -g netlify-cli
+
+# Build del proyecto
+npm run build
+
+# Deploy a Netlify
+netlify deploy --prod --dir=.next
+```
+
+### Opción 2: Arrastrar y Soltar
+
+1. **Build del proyecto:**
+
+```bash
+npm run build
+```
+
+2. **Comprimir la carpeta `.next`**
+3. **Subir a Netlify** mediante drag & drop
+
+### Opción 3: GitHub Integration
+
+1. Conectar tu repositorio a Netlify
+2. Configurar build command: `npm run build`
+3. Configurar publish directory: `.next`
+4. Deploy automático en cada push
+
+### Variables de Entorno (si son necesarias)
+
+Configura en Netlify:
+
+- `NEXT_PUBLIC_SITE_URL=https://tudominio.netlify.app`
+
+### Configuración Adicional
+
+Para Next.js en Netlify, asegúrate de:
+
+- Usar Static Site Generation cuando sea posible
+- Configurar redirects si usas rutas dinámicas
+- Optimizar imágenes para el CDN de Netlify
+
+## 📄 Licencia
+
+© 2024 MF Construction. Todos los derechos reservados.
+
+---
+
+**Calidad y confianza en cada acabado**

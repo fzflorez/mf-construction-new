@@ -1,65 +1,110 @@
-import Image from "next/image";
+'use client'
+
+import { useState, useEffect } from 'react'
+import Header from '../components/Header'
+import ProjectCard from '../components/ProjectCard'
+import FilterButtons from '../components/FilterButtons'
+import VideoModal from '../components/VideoModal'
+import ImageGallery from '../components/ImageGallery'
+import Footer from '../components/Footer'
+import { projects, type Project } from '../data/projects'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Home() {
+  const [activeFilter, setActiveFilter] = useState('Todos')
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
+  const [selectedImages, setSelectedImages] = useState<string[] | null>(null)
+
+  // Inicializar AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50,
+      easing: 'ease-out',
+      disable: 'mobile',
+    })
+  }, [])
+
+  const filteredProjects =
+    activeFilter === 'Todos'
+      ? projects
+      : projects.filter((project: Project) => project.category === activeFilter)
+
+  const handleVideoClick = (videoUrl: string) => {
+    setSelectedVideo(videoUrl)
+  }
+
+  const handlePhotosClick = (images: string[]) => {
+    setSelectedImages(images)
+  }
+
+  const closeVideoModal = () => {
+    setSelectedVideo(null)
+  }
+
+  const closeImageGallery = () => {
+    setSelectedImages(null)
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gray-900">
+      <Header />
+
+      <main className="container mx-auto max-w-7xl px-6 pt-32 pb-12 relative z-10">
+        <section className="text-left mb-12" data-aos="fade-right">
+          <h1 className="text-xl lg:text-2xl font-bold text-white mb-4 font-poppins">
+            Trabajos Realizados
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-gray-300 text-base lg:text-lg max-w-lg mb-8 font-inter">
+            Galería de proyectos de construcción, remodelación y acabados.
+            Selecciona una categoría para filtrar.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          <div data-aos="fade-right" data-aos-delay="100">
+            <FilterButtons
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {filteredProjects.map((project, index) => (
+            <div
+              key={project.id}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                imageUrl={project.imageUrl}
+                images={project.images}
+                videoUrl={project.videoUrl}
+                hasVideo={project.hasVideo}
+                onVideoClick={handleVideoClick}
+                onPhotosClick={handlePhotosClick}
+              />
+            </div>
+          ))}
+        </section>
       </main>
+
+      <VideoModal
+        videoUrl={selectedVideo || ''}
+        isOpen={!!selectedVideo}
+        onClose={closeVideoModal}
+      />
+
+      <ImageGallery
+        images={selectedImages || []}
+        isOpen={!!selectedImages}
+        onClose={closeImageGallery}
+      />
+
+      <Footer />
     </div>
-  );
+  )
 }
