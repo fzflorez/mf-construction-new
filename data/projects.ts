@@ -15,13 +15,16 @@ export const projects: Project[] = [
     title: 'Remodelación Completa Habitación',
     description:
       'Aplicación de estuco plástico y pintura vinílica tipo 2. Instalación de panel para cielo raso con acabado en estuco plástico.',
-    imageUrl: '/images/habitacion-estuco-1.webp',
+    imageUrl:
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-4_dragjb.webp',
     images: [
-      '/images/habitacion-estuco-1.webp',
-      '/images/habitacion-estuco-2.webp',
-      '/images/habitacion-estuco-3.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-4_dragjb.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-1_mc9jkh.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-2_ulxjzl.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-3_xblt5w.webp',
     ],
-    videoUrl: '/videos/habitacion-estuco.mp4',
+    videoUrl:
+      'https://res.cloudinary.com/dn3kjinrh/video/upload/q_auto,w_1280/v1774922188/habitacion-estuco_gxtcck.mp4',
     hasVideo: true,
     category: 'Estuco y Pintura',
   },
@@ -30,12 +33,16 @@ export const projects: Project[] = [
     title: 'Enchape en Fachada',
     description:
       'Instalación de enchapes de piedra natural en fachada comercial con acabado profesional.',
-    imageUrl: '/images/habitacion-estuco-1.webp',
+    imageUrl:
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-4_dragjb.webp',
     images: [
-      '/images/habitacion-estuco-1.webp',
-      '/images/habitacion-estuco-2.webp',
-      '/images/habitacion-estuco-3.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-4_dragjb.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-1_mc9jkh.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-2_ulxjzl.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-3_xblt5w.webp',
     ],
+    videoUrl:
+      'https://res.cloudinary.com/dn3kjinrh/video/upload/q_auto,w_1280/v1774922188/habitacion-estuco_gxtcck.mp4',
     hasVideo: true,
     category: 'Enchapes',
   },
@@ -44,12 +51,16 @@ export const projects: Project[] = [
     title: 'Estuco y Pintura Interior',
     description:
       'Aplicación de estuco de alta calidad y sistema de pintura duradero en interiores.',
-    imageUrl: '/images/habitacion-estuco-1.webp',
+    imageUrl:
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-4_dragjb.webp',
     images: [
-      '/images/habitacion-estuco-1.webp',
-      '/images/habitacion-estuco-2.webp',
-      '/images/habitacion-estuco-3.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-4_dragjb.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-1_mc9jkh.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-2_ulxjzl.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1000,f_auto,q_auto/v1774922159/habitacion-estuco-3_xblt5w.webp',
     ],
+    videoUrl:
+      'https://res.cloudinary.com/dn3kjinrh/video/upload/q_auto,w_1280/v1774922188/habitacion-estuco_gxtcck.mp4',
     hasVideo: true,
     category: 'Estuco y Pintura',
   },

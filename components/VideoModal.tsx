@@ -65,6 +65,7 @@ export default function VideoModal({
               controls
               autoPlay
               playsInline
+              preload="metadata"
               src={videoUrl}
             >
               Tu navegador no soporta la reproducción de video.
