@@ -92,17 +92,23 @@ export default function Home() {
         </section>
       </main>
 
-      <VideoModal
-        videoUrl={selectedVideo || ''}
-        isOpen={!!selectedVideo}
-        onClose={closeVideoModal}
-      />
+      {/* ✅ Video modal SOLO se renderiza cuando hay video */}
+      {selectedVideo && (
+        <VideoModal
+          videoUrl={selectedVideo}
+          isOpen={true}
+          onClose={closeVideoModal}
+        />
+      )}
 
-      <ImageGallery
-        images={selectedImages || []}
-        isOpen={!!selectedImages}
-        onClose={closeImageGallery}
-      />
+      {/* ✅ Galería SOLO se renderiza cuando hay imágenes */}
+      {selectedImages && (
+        <ImageGallery
+          images={selectedImages}
+          isOpen={true}
+          onClose={closeImageGallery}
+        />
+      )}
 
       <Footer />
     </div>
