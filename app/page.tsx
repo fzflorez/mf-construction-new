@@ -7,7 +7,7 @@ import FilterButtons from '../components/FilterButtons'
 import VideoModal from '../components/VideoModal'
 import ImageGallery from '../components/ImageGallery'
 import Footer from '../components/Footer'
-import { projects, type Project } from '../data/projects'
+import { projects } from '../data/projects'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -27,10 +27,12 @@ export default function Home() {
     })
   }, [])
 
-  const filteredProjects =
-    activeFilter === 'Todos'
-      ? projects
-      : projects.filter((project: Project) => project.category === activeFilter)
+  const filteredProjects = [...projects]
+    .filter(
+      (project) =>
+        activeFilter === 'Todos' || project.category === activeFilter,
+    )
+    .sort((a, b) => b.id - a.id)
 
   const handleVideoClick = (videoUrl: string) => {
     setSelectedVideo(videoUrl)

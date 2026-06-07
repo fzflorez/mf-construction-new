@@ -105,7 +105,7 @@ export default function VideoModal({
         </div>
 
         {/* Barra inferior del modal */}
-        <div className="absolute -bottom-2 left-0 right-0 h-4 bg-gradient-to-t from-black to-transparent opacity-50 rounded-b-xl"></div>
+        <div className="absolute -bottom-2 left-0 right-0 h-4 bg-linear-to-t from-black to-transparent opacity-50 rounded-b-xl"></div>
       </div>
     </div>
   )

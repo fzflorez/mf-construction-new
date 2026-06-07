@@ -13,7 +13,8 @@ export default function FilterButtons({
     'Todos',
     'Enchapes',
     'Estuco y Pintura',
-    'Repello / Pañete',
+    'Repello',
+    'Iluminación',
     'Obra Civil',
   ]
 
