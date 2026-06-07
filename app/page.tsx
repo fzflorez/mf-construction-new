@@ -23,7 +23,6 @@ export default function Home() {
       once: true,
       offset: 50,
       easing: 'ease-out',
-      disable: 'mobile',
     })
   }, [])
 
