@@ -160,4 +160,23 @@ export const projects: Project[] = [
     hasVideo: false,
     category: 'Repello',
   },
+  {
+    id: 10,
+    title: 'Instalación de Cerámica en Muro',
+    description:
+      'Instalación de cerámica sobre muro previamente preparado con repello y nivelación. Acabado profesional con alineamiento perfecto y juntas uniformes.',
+    imageUrl:
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_800,h_450,f_auto,q_auto,c_fill,g_auto/v1782699252/enchape-muro-1_trieu9.webp',
+    images: [
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1200,f_auto,q_auto,c_limit/v1782699252/enchape-muro-1_trieu9.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1200,f_auto,q_auto,c_limit/v1782699248/enchape-muro-2_shwiqn.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1200,f_auto,q_auto,c_limit/v1782699248/enchape-muro-3_d6mi1c.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1200,f_auto,q_auto,c_limit/v1782699247/enchape-muro-4_h1sotm.webp',
+      'https://res.cloudinary.com/dn3kjinrh/image/upload/w_1200,f_auto,q_auto,c_limit/v1782699248/enchape-muro-5_cceyyt.webp',
+    ],
+    videoUrl:
+      'https://res.cloudinary.com/dn3kjinrh/video/upload/q_auto,w_1280/v1782703281/enchape-muro_sbltp7.mp4',
+    hasVideo: true,
+    category: 'Enchapes',
+  },
 ]

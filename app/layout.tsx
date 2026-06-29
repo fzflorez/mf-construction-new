@@ -14,7 +14,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'MF Construction',
+  title: 'MF Construcción',
   description: 'Calidad y confianza en cada acabado',
 }
 

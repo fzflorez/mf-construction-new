@@ -15,7 +15,6 @@ export default function FilterButtons({
     'Estuco y Pintura',
     'Repello',
     'Iluminación',
-    'Obra Civil',
   ]
 
   return (

@@ -85,6 +85,7 @@ export default function Home() {
                 images={project.images}
                 videoUrl={project.videoUrl}
                 hasVideo={project.hasVideo}
+                priority={index === 0}
                 onVideoClick={handleVideoClick}
                 onPhotosClick={handlePhotosClick}
               />

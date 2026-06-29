@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Button from './Button'
 import { Phone, Menu, X } from 'lucide-react'
 import { useState } from 'react'
@@ -21,13 +22,17 @@ export default function Header() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-lime-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm sm:text-lg font-inter">
-                  MF
-                </span>
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+                <Image
+                  src="https://res.cloudinary.com/dn3kjinrh/image/upload/w_120,h_120,f_auto,q_auto,c_fit/v1782709310/MF-logo_irecem.webp"
+                  alt="MF Construcción Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <h1 className="text-lg sm:text-xl font-bold text-white hidden sm:block font-poppins">
-                MF Construction
+                MF Construcción
               </h1>
             </div>
 
@@ -73,10 +78,14 @@ export default function Header() {
           <div className="fixed top-0 left-0 right-0 bg-gray-900 shadow-xl">
             <div className="flex items-center justify-between p-4 border-b border-white/10">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-lime-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm font-inter">
-                    MF
-                  </span>
+                <div className="relative w-10 h-10">
+                  <Image
+                    src="https://res.cloudinary.com/dn3kjinrh/image/upload/w_120,h_120,f_auto,q_auto,c_fit/v1782709310/MF-logo_irecem.webp"
+                    alt="MF Construcción Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
               <button

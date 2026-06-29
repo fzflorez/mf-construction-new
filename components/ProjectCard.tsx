@@ -10,6 +10,7 @@ interface ProjectCardProps {
   images: string[]
   videoUrl?: string
   hasVideo?: boolean
+  priority?: boolean
   onVideoClick?: (videoUrl: string) => void
   onPhotosClick?: (images: string[]) => void
 }
@@ -21,6 +22,7 @@ export default function ProjectCard({
   images,
   videoUrl,
   hasVideo = false,
+  priority = false,
   onVideoClick,
   onPhotosClick,
 }: ProjectCardProps) {
@@ -80,6 +82,7 @@ export default function ProjectCard({
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={priority}
           />
         )}
 

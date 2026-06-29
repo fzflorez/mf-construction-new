@@ -12,8 +12,8 @@ MF Construction es un sitio web moderno desarrollado con Next.js que muestra nue
 - **Filtrado por Categorías**:
   - Enchapes
   - Estuco y Pintura
-  - Repello / Pañete
-  - Obra Civil
+  - Repello
+  - Iluminación
 - **Videos e Imágenes**: Galería multimedia con modales
 - **Contacto Directo**: Integración con WhatsApp
 - **Diseño Responsive**: Optimizado para todos los dispositivos
